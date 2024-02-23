@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "+x6dWGACFsM3rjr5qFrLbZ3bKl/WZtKYqz5X5gP3mtbchnnnFBYwTZTY1zYk5eCOD2u59//5AWloZKU9RW61JA==",
+  "dgSpecHash": "d8hCyGRDpMBz94pBdiwMJHdQiHLF6sCwcDCRUzBwaYPswIhWMxUDNpfNjE4akqchfMn4vryuBCfoyHr3Mlu5lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alva.svensson3\\.nuget\\packages\\raylib-cs\\6.0.0\\raylib-cs.6.0.0.nupkg.sha512",
+    "C:\\Users\\alva.svensson3\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\alva.svensson3\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\alva.svensson3\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\alva.svensson3\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
