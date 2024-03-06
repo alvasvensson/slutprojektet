@@ -26,6 +26,7 @@ public class AccountManager
                 userExists = false;
             }
         }
+
         if (userExists == true)
         {
             Console.WriteLine("password?");
@@ -54,12 +55,37 @@ public class AccountManager
     }
     public void CreateAccount()
     {
+        string usernameTry = "";
+
         Console.WriteLine("username?");
+
         //kolla om det redan finns
-        Console.WriteLine("password?");
-        //svar
-        Console.WriteLine("repeat password?");
-        //svar
+        usernameTry = Console.ReadLine();
+        foreach (Account a in accounts)
+        {
+            if (usernameTry == a.Username)
+            {
+                break;
+            }
+            else
+            {
+                Console.WriteLine("password?");
+                string passwordTry1 = Console.ReadLine();
+                Console.WriteLine("repeat password?");
+                string passwordTry2 = Console.ReadLine();
+                if (passwordTry1 == passwordTry2)
+                {
+                    //lyckat, lägg till i accountlistan 
+                }
+                else
+                {
+                    //fail
+                }
+
+            }
+        }
+
+
 
         // lägga till användaramnet och lösenordet i accountlistan
 
