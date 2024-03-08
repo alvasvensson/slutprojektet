@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj": {}
+    "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj": {
+    "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
+        "projectUniqueName": "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
         "projectName": "slutprojektet",
-        "projectPath": "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
+        "projectPath": "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\slutprojektet.csproj",
         "packagesPath": "C:\\Users\\alva.svensson3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\obj\\",
+        "outputPath": "c:\\Users\\alva.svensson3\\Documents\\prog2\\slutprojektet\\slutprojektet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,22 +4,42 @@ using System.Text.Json;
 using Raylib_cs;
 using slutprojektet;
 
-Raylib.InitWindow(600, 800, "Pokemon");
+// Raylib.InitWindow(600, 800, "Pokemon");
 
 RestClient client = new("https://pokeapi.co/api/v2/");
 
 Inventory inv = new Inventory();
 
-while (!Raylib.WindowShouldClose())
-{
-    Raylib.SetTargetFPS(60);
-    Raylib.BeginDrawing();
+AccountManager AM = new AccountManager();
 
-    Raylib.ClearBackground(Color.Black);
+// while (!Raylib.WindowShouldClose())
+// {
+//     Raylib.SetTargetFPS(60);
+//     Raylib.BeginDrawing();
 
-    inv.Draw();
+//     Raylib.ClearBackground(Color.Black);
 
-    Raylib.EndDrawing();
-}
+//     inv.Draw();
+
+//     Raylib.EndDrawing();
+// }
+
+
+/*
+[
+    {
+        "username": "hello",
+        "password": "also hello
+    },
+    {
+
+    }
+]
+
+*/
+AM.CreateAccount();
+AM.Save();
+
+Console.ReadLine();
 
 
