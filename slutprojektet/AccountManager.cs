@@ -7,11 +7,10 @@ public class AccountManager
     List<Account> accounts = new List<Account>();
     public void Load()
     {
-        // Ladda in frn fil
-        string hej = File.ReadAllText("accounts.json")
+        //Läsa in JSOn filen och lägga in alla objekt i den till accountslistan
+        string hej = File.ReadAllText("accounts.json");
         accounts = JsonSerializer.Deserialize<List<Account>>(hej);
     }
-    //Läsa in JSOn filen och lägga in alla objekt i den till accountslistan
 
     public bool LogIn()
     {
