@@ -4,14 +4,21 @@ using Raylib_cs;
 public class Startpage : Screen
 {
     private AccountManager _accountManager;
-    public Startpage(AccountManager manager)
+
+    private IRenderable _renderer;
+    public Startpage(AccountManager manager, IRenderable renderer)
     {
         _accountManager = manager;
+        _renderer = renderer;
+    }
+
+    public void Render()
+    {
+        _renderer.Draw();
     }
 
     public override Screen IsHappening()
     {
-
         Rectangle loginButton = new Rectangle(500, 100, 50, 50);
         System.Numerics.Vector2 mousePos = Raylib.GetMousePosition();
         bool wantLogIn = Raylib.CheckCollisionPointRec(mousePos, loginButton);

@@ -13,7 +13,7 @@ Inventory inv = new Inventory();
 AccountManager AM = new AccountManager();
 StartPageRender startPageRender = new();
 
-Screen currentScreen = new Startpage(AM);
+Screen currentScreen = new Startpage(AM, startPageRender);
 
 Raylib.SetTargetFPS(60);
 

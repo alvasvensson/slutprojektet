@@ -1,8 +1,16 @@
 ﻿namespace slutprojektet;
+using Raylib_cs;
 
 public class LoginRenderer : IRenderable
 {
-    public void Draw()
+    public static void Draw()
+    {
+        Raylib.DrawText("Username?", 100, 100, 16, Color.White);
+        Write.Input();
+
+    }
+
+    public void Input()
     {
 
     }

@@ -10,8 +10,6 @@ public class StartPageRender : IRenderable
     {
         Raylib.DrawRectangleRec(loginButton, Color.White);
         Raylib.DrawText("login", 500, 100, 30, Color.Black);
-
-
         
     }
 }
