@@ -19,15 +19,27 @@ public class Login : Screen
         ((LoginRenderer)_renderer).Password = password;
         ((LoginRenderer)_renderer).Draw();
         _renderer.Draw();
+        int key = Raylib.GetKeyPressed();
         if (currentInputBox == "username")
         {
-            username = Write.Input(username, 200);
+            username = Write.Input(username, 200, key);
+            if (key == 257)
+            {
+                currentInputBox = "password";
+            }
         }
         else if (currentInputBox == "password")
         {
-            password = Write.Input(password, 400);
+            password = Write.Input(password, 400, key);
         }
-        _accountManager.LogIn(username, password);
+        if (key == 257)
+        {
+            bool t =_accountManager.LogIn(username, password);
+            if (!t)
+            {
+
+            }
+        }
         return this;
     }
 }
