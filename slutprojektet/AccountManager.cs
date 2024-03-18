@@ -12,9 +12,8 @@ public class AccountManager
         accounts = JsonSerializer.Deserialize<List<Account>>(hej);
     }
 
-    public bool LogIn()
+    public bool LogIn(string username, string password)
     {
-        LoginRenderer.Draw();
         bool userExists = false;
         int chosenAccount = -1;
         return false;

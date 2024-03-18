@@ -4,13 +4,12 @@ using Raylib_cs;
 public class Write
 {
 
-    public static string Input()
+    public static string Input(string text, int y)
     {
-        string text = " ";
         int key = Raylib.GetKeyPressed();
         if (key != 0)
         {
-            while (key != 13)
+            if (key != 13)
             {
                 if (key == 259)
                 {
@@ -27,10 +26,9 @@ public class Write
                 {
                     text += (char)key;
                 }
-                Raylib.DrawText(text, 100, 200, 16, Color.White);
+                Raylib.DrawText(text, 100, y, 16, Color.White);
             }
         }
         return text;
-
     }
 }

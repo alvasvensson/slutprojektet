@@ -19,14 +19,14 @@ Raylib.SetTargetFPS(60);
 
 while (!Raylib.WindowShouldClose())
 {
-    currentScreen = currentScreen.IsHappening();
 
     Raylib.BeginDrawing();
 
     Raylib.ClearBackground(Color.Black);
+    currentScreen = currentScreen.IsHappening();
 
-    inv.Draw();
-    startPageRender.Draw();
+    // inv.Draw();
+    // startPageRender.Draw();
 
 
     Raylib.EndDrawing();

@@ -12,20 +12,17 @@ public class Startpage : Screen
         _renderer = renderer;
     }
 
-    public void Render()
-    {
-        _renderer.Draw();
-    }
 
     public override Screen IsHappening()
     {
+        _renderer.Draw();
         Rectangle loginButton = new Rectangle(500, 100, 50, 50);
         System.Numerics.Vector2 mousePos = Raylib.GetMousePosition();
         bool wantLogIn = Raylib.CheckCollisionPointRec(mousePos, loginButton);
 
         if (Raylib.IsMouseButtonPressed(MouseButton.Left) && wantLogIn == true)
         {
-            _accountManager.LogIn();
+            // _accountManager.LogIn();
             return new Login(_accountManager);
         }
 
