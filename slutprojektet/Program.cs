@@ -17,6 +17,7 @@ Screen currentScreen = new Startpage(AM, startPageRender);
 
 Raylib.SetTargetFPS(60);
 
+AM.Load();
 while (!Raylib.WindowShouldClose())
 {
 
@@ -32,8 +33,6 @@ while (!Raylib.WindowShouldClose())
     Raylib.EndDrawing();
 }
 
-AM.Load();
-AM.CreateAccount();
 AM.Save();
 
 Console.ReadLine();

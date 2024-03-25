@@ -9,7 +9,7 @@ public class Write
 
         if (key != 0)
         {
-            Console.WriteLine(key);
+            // Console.WriteLine(key);
 
             if (key == 259)
             {

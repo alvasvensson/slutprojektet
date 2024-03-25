@@ -12,11 +12,11 @@ public class AccountManager
         accounts = JsonSerializer.Deserialize<List<Account>>(hej);
     }
 
-    public bool LogIn(string username, string password)
+    public Account LogIn(string username, string password)
     {
         bool userExists = false;
         int chosenAccount = -1;
-        return false;
+        // return null;
         for (int a = 0; a < accounts.Count; a++)
         {
             if (username == accounts[a].Username)
@@ -36,17 +36,17 @@ public class AccountManager
         {
             if (password == accounts[chosenAccount].Password)
             {
-                return true;
+                return accounts[chosenAccount];
             }
             else
             {
-                return false;
+                return null;
             }
         }
-            else
-            {
-                return false;
-            }
+        else
+        {
+            return null;
+        }
 
 
 
@@ -58,39 +58,42 @@ public class AccountManager
         File.WriteAllText("accounts.json", json);
     }
 
-    public void CreateAccount()
+    public Account CreateAccount(string usernameTry, string passwordTry1, string passwordTry2)
     {
-        string usernameTry = "";
-        string passwordTry1 = "";
-        string passwordTry2 = "";
-        Console.WriteLine(accounts.Count);
+        // string usernameTry = "";
+        // string passwordTry1 = "";
+        // string passwordTry2 = "";
+        // Console.WriteLine(accounts.Count);
 
-        Console.WriteLine("username?");
+        // Console.WriteLine("username?");
 
         //kolla om det redan finns
-        usernameTry = Console.ReadLine();
+        // usernameTry = Console.ReadLine();
 
         while (accounts.Where(a => a.Username == usernameTry).Count() > 0)
         {
-            Console.WriteLine("That username is taken, try another one");
-            usernameTry = Console.ReadLine();
+            // Console.WriteLine("That username is taken, try another one");
+            // usernameTry = Console.ReadLine();
+            return null;
         }
 
-        Console.WriteLine("password?");
-        passwordTry1 = Console.ReadLine();
-        Console.WriteLine("repeat password?");
-        passwordTry2 = Console.ReadLine();
-        while (passwordTry1 != passwordTry2)
+        // Console.WriteLine("password?");
+        // passwordTry1 = Console.ReadLine();
+        // Console.WriteLine("repeat password?");
+        // passwordTry2 = Console.ReadLine();
+        if (passwordTry1 == passwordTry2)
         {
-            Console.WriteLine("passwords doesnt match, try again");
-            Console.WriteLine("password?");
-            passwordTry1 = Console.ReadLine();
-            Console.WriteLine("repeat password?");
-            passwordTry2 = Console.ReadLine();
+            // Console.WriteLine("passwords doesnt match, try again");
+            // Console.WriteLine("password?");
+            // passwordTry1 = Console.ReadLine();
+            // Console.WriteLine("repeat password?");
+            // passwordTry2 = Console.ReadLine();
+            Account n = new Account(usernameTry, passwordTry1);
+            accounts.Add(n);
+            Console.WriteLine(accounts.Count);
+            return n;
         }
-        Account n = new Account(usernameTry, passwordTry1);
-        accounts.Add(n);
-        Console.WriteLine(accounts.Count);
+        return null;
         // WHILE användarnmn finns i listan:
         // Läs in nytt
 

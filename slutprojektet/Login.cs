@@ -31,13 +31,13 @@ public class Login : Screen
         else if (currentInputBox == "password")
         {
             password = Write.Input(password, 400, key);
-        }
-        if (key == 257)
-        {
-            bool t =_accountManager.LogIn(username, password);
-            if (!t)
+            if (key == 257)
             {
-
+                Account loggedInAccount = _accountManager.LogIn(username, password);
+                if (loggedInAccount != null)
+                {
+                    return new Home(loggedInAccount);
+                }
             }
         }
         return this;
