@@ -3,6 +3,7 @@ using Raylib_cs;
 
 public class CreateAccount : Screen
 {
+    //variables 
     private AccountManager _accountManager;
     private IRenderable _renderer = new CreateAccountRenderer();
     string currentInputBox = "username";
@@ -10,10 +11,15 @@ public class CreateAccount : Screen
     public string passwordTry1 = "";
     public string passwordTry2 = "";
 
+    //Constructor
     public CreateAccount(AccountManager manager)
     {
         _accountManager = manager;
     }
+
+    //Collects userinput with the Write.Input method, 
+    //Runs it through the accountmanagers create account method,
+    //based on the results, returns the correct screen accordingly 
     public override Screen IsHappening()
     {
         ((CreateAccountRenderer)_renderer).Username = username;

@@ -3,16 +3,22 @@ using Raylib_cs;
 
 public class Login : Screen
 {
+    //Variables
     private AccountManager _accountManager;
     private IRenderable _renderer = new LoginRenderer();
     string currentInputBox = "username";
     public string username = "";
     public string password = "";
+
+    //Constructor
     public Login(AccountManager manager)
     {
         _accountManager = manager;
     }
 
+    //Collects logininformation from the user by calling the Write.Input method,
+    //runs it through the accountmanagers login method,
+    //based on the results, returns the correct screen accordingly 
     public override Screen IsHappening()
     {
         ((LoginRenderer)_renderer).Username = username;

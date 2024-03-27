@@ -3,11 +3,13 @@ using Raylib_cs;
 
 public class CreateAccountRenderer : IRenderable
 {
+    //variables 
     public string Username { get; set; }
     public string PasswordTry1 { get; set; }
     public string PasswordTry2 { get; set; }
 
-     public void Draw()
+    //Draws everything in the Scene
+    public void Draw()
     {
         Raylib.DrawText("Username?", 100, 100, 16, Color.White);
         Raylib.DrawText(Username, 100, 200, 16, Color.Beige);

@@ -1,10 +1,9 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace slutprojektet;
+﻿namespace slutprojektet;
 using Raylib_cs;
 
 public class Home : Screen
 {
+    //Variables
     private IRenderable _renderer = new HomeRenderer();
     public Home(Account loggedInAccount)
     {

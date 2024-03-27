@@ -3,16 +3,19 @@ using Raylib_cs;
 
 public class Startpage : Screen
 {
+    //Variables
     private AccountManager _accountManager;
-
     private IRenderable _renderer;
+
+    // Constructor 
     public Startpage(AccountManager manager, IRenderable renderer)
     {
         _accountManager = manager;
         _renderer = renderer;
     }
 
-
+    //Runs this scene's draw method, creates buttons and gets mouse position, 
+    // checks collision and returns the corresponding scene
     public override Screen IsHappening()
     {
         _renderer.Draw();
@@ -24,7 +27,6 @@ public class Startpage : Screen
 
         if (Raylib.IsMouseButtonPressed(MouseButton.Left) && wantLogIn == true)
         {
-            // _accountManager.LogIn();
             return new Login(_accountManager);
         }
         if (Raylib.IsMouseButtonPressed(MouseButton.Left) && wantCreateAccount == true)
