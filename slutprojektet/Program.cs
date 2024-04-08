@@ -4,35 +4,28 @@ using System.Text.Json;
 using Raylib_cs;
 using slutprojektet;
 
+//opens the raylib window when the programme is started
 Raylib.InitWindow(600, 800, "Pokemon");
 
-RestClient client = new("https://pokeapi.co/api/v2/");
-
-Inventory inv = new Inventory();
-
+//Instances
 AccountManager AM = new AccountManager();
 StartPageRender startPageRender = new();
 
 Screen currentScreen = new Startpage(AM, startPageRender);
+
 
 Raylib.SetTargetFPS(60);
 
 AM.Load();
 while (!Raylib.WindowShouldClose())
 {
-
     Raylib.BeginDrawing();
 
     Raylib.ClearBackground(Color.Black);
     currentScreen = currentScreen.IsHappening();
 
-    // inv.Draw();
-    // startPageRender.Draw();
-
-
     Raylib.EndDrawing();
 }
-
 
 AM.Save();
 

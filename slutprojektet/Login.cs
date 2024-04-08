@@ -6,7 +6,7 @@ public class Login : Screen
     //Variables
     private AccountManager _accountManager;
     private IRenderable _renderer = new LoginRenderer();
-    string currentInputBox = "username";
+    private string currentInputBox = "username";
     public string username = "";
     public string password = "";
 
